@@ -1,10 +1,9 @@
 import React from 'react';
 import './ItemListContainer.css';
 
-const ListContainer = ({titulo, saludo}) =>{
+const ListContainer = ({titulo}) =>{
     return <div>
                 <h3 className="titulo">{titulo}</h3> 
-                <h2>{saludo}</h2>
             </div>
 };
  

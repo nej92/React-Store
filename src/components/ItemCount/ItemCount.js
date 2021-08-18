@@ -1,21 +1,24 @@
 import React from 'react';
 import './ItemCount.css';
 
-const ItemCount = () => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [counter, setCounter] = React.useState(0);
-//    const [stock, setStock] = React.useState(5);
+    const [counter, setCounter] = React.useState(Number(initial));
 
     const btnSumar = () =>{
-        if (counter === 5) {
+        if (counter >= stock) {
             document.getElementById('sum').disable = true;
         } else{
             setCounter (counter + 1);
         }
     };
 
+    onAdd = () => {
+        alert(`${counter} productos agregados al carro`);
+    }
+
     const btnRestar = () =>{
-        if (counter === 0) {
+        if (counter <= initial) {
             document.getElementById('rest').disable = true;
         } else {
             setCounter (counter - 1);
@@ -23,10 +26,10 @@ const ItemCount = () => {
     };
 
 
-    return  <div>
+    return  <div className="btnAgregarAlCarro">
                 <p>{counter}</p>
                 <button id="sum" onClick={btnRestar}>-</button>
-                <button>Agregar al carrito</button>
+                <button onClick={onAdd}>Agregar al carrito</button>
                 <button id="rest" onClick={btnSumar}>+</button>
             </div>
 }

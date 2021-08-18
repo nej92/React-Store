@@ -10,10 +10,10 @@ class App extends Component {
       <div>
         <div className="App">
           <NavBar />
-          <ListContainer titulo="Lista de Productos" saludo="Bienvenidos!" />
+          <ListContainer titulo="Lista de Productos" />
         </div>
         <div>
-          <ItemCount />
+          <ItemCount stock ="5" initial ="1"/>
         </div>
 
       </div>

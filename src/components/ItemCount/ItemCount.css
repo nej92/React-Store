@@ -1,0 +1,12 @@
+.btnAgregarAlCarro {
+  text-align: center;
+  margin-top: 2em;
+}
+
+button {
+  padding: 0.5em;
+  color: #ffff;
+  background-color: rgb(0, 0, 0);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
