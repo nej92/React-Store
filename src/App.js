@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './App.css';
-import ListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemCount from "./components/ItemCount/ItemCount";
+
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "./components/NavBar/NavBar";
 
 
@@ -12,14 +12,12 @@ class App extends Component {
         <div className="App">
           <NavBar />
           
-          <ListContainer titulo="Lista de Productos" />
         </div>
-        <div>
-          <ItemCount stock ="5" initial ="1"/>
-        </div>
+        
+        <ItemDetailContainer />
 
       </div>
-    );
+    )
   }
 }
 

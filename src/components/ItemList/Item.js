@@ -1,18 +1,19 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-const ItemCard = ({data}) => {
+const Item = ({propData}) => {
 
    return (
     <div>
         <Card>
             <Card.Content>
-                <Card.Header><img src={data.img} width="250px" alt="{food image}"/></Card.Header>
-                <Card.Description>{data.name}</Card.Description>
+                <Card.Header><img src={propData.img} width="250px" alt="food"/></Card.Header>
+                <Card.Description>{propData.name}</Card.Description>
             </Card.Content>
         
         </Card>
     </div>
     );
 };
-export default ItemCard;
+
+export default Item;
