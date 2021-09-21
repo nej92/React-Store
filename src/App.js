@@ -1,22 +1,30 @@
 import React, {Component} from "react";
 import './App.css';
-
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import NavBar from "./components/NavBar/NavBar";
-
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Navigation from "./components/Navigation/Navigation";
+import PicadasConteiner from './views/PicadasConteiner/PicadasConteiner';
+import PastasConteiner from "./views/PastasConteiner/PastasConteiner";
+import HamburguerConteiner from './views/HamburguerConteiner/HamburguerConteiner';
+import PizzasConteiner from './views/PizzasConteiner/PizzasConteiner';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <div className="App">
-          <NavBar />
-          
-        </div>
+      <BrowserRouter>
+        <nav className='NavBarStyle'>
         
-        <ItemDetailContainer />
-
-      </div>
+         <Navigation />
+         <Switch>
+            <Route path='/' exact component={ItemListContainer} /> 
+            <Route path='/Picadas' component={PicadasConteiner} />
+            <Route path='/Pastas' component={PastasConteiner} />
+            <Route path='/Hamburguer' component={HamburguerConteiner} />
+            <Route path='/Pizzas' component={PizzasConteiner} />
+          </Switch>
+        </nav>
+        
+      </BrowserRouter>
     )
   }
 }
